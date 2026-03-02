@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Itens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Sistema de Itens</h1>
+            <nav>
+                <a href="index.html">Página Inicial</a>
+                <a href="cadastro.html" class="active">Cadastrar Novo Item</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Adicionar Novo Item</h2>
+
+        <div class="form-container">
+            <form id="cadastroForm">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite o nome do item">
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" rows="4" required
+                        placeholder="Digite a descrição"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Selecione uma categoria...</option>
+                        <option value="Eletrônicos">Eletrônicos</option>
+                        <option value="Livros">Livros</option>
+                        <option value="Filmes">Filmes</option>
+                        <option value="Música">Música</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Salvar Item</button>
+            </form>
+            <div id="mensagem" style="display: none; margin-top: 15px; padding: 10px; border-radius: 4px;"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Adiciona o listener para o formulário de cadastro
+        document.getElementById('cadastroForm').addEventListener('submit', cadastrarItem);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Itens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sistema de Itens</h1>
+            <nav>
+                <a href="index.html" class="active">Página Inicial</a>
+                <a href="cadastro.html">Cadastrar Novo Item</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Itens Cadastrados</h2>
+        <div class="list-container">
+            <table id="itensTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+                <tbody id="itensList">
+                    <!-- Os itens serão carregados aqui via JavaScript -->
+                </tbody>
+            </table>
+            <p id="emptyMessage" style="display: none; text-align: center; margin-top: 20px;">Nenhum item cadastrado ainda.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Carrega os itens apenas na index.html
+        window.onload = buscarItens;
+    </script>
+</body>
+</html>
